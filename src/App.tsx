@@ -183,15 +183,18 @@ function App() {
               Informations Pratiques
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
+              {/* Horaires */}
               <div className="bg-white rounded-2xl p-6 shadow-lg">
                 <Clock className="w-8 h-8 text-[#C1DCEF] mb-4"/>
                 <h3 className="text-xl font-display font-semibold mb-4">Horaires</h3>
                 <ul className="space-y-2 text-gray-600">
-                  <li>Lundi - Vendredi : 9h - 19h</li>
-                  <li>Samedi : 9h - 13h</li>
+                  <li>Lundi - Vendredi : 9h - 18h30</li>
+                  <li>Samedi : 9h - 12h30</li>
                   <li>Dimanche : Fermé</li>
                 </ul>
               </div>
+
+              {/* Adresse */}
               <div className="bg-white rounded-2xl p-6 shadow-lg">
                 <MapPin className="w-8 h-8 text-[#C7DFD1] mb-4"/>
                 <h3 className="text-xl font-display font-semibold mb-4">Adresse</h3>
@@ -202,17 +205,24 @@ function App() {
                   France
                 </p>
               </div>
+
+              {/* Contact */}
               <div className="bg-white rounded-2xl p-6 shadow-lg">
                 <Phone className="w-8 h-8 text-[#C1DCEF] mb-4"/>
                 <h3 className="text-xl font-display font-semibold mb-4">Contact</h3>
-                <p className="text-gray-600">
-                  Tél : 07 69 77 23 80<br/>
-                  Email : contact@osteo-roanne.fr
+                <p className="text-gray-600 space-y-1">
+                  <a href="tel:+33769772380" className="text-blue-600 hover:underline block">
+                    Tél : 07 69 77 23 80
+                  </a>
+                  <a href="mailto:contact@osteo-roanne.fr" className="text-blue-600 hover:underline block">
+                    Email : contact@osteo-roanne.fr
+                  </a>
                 </p>
               </div>
             </div>
           </div>
         </section>
+
 
         {/* Pourquoi consulter */}
         <section id="pourquoi" className="py-20 bg-brand-green/20">
