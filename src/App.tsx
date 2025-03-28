@@ -142,7 +142,7 @@ function App() {
                     {/* Première rangée : Horaires et Adresse */}
                     <div className="grid md:grid-cols-2 gap-8">
                         {/* Horaires */}
-                        <div className="bg-white rounded-2xl p-6 shadow-lg">
+                        <div className="bg-white rounded-2xl p-6 shadow-lg md:col-span-2">
                             <Clock className="w-8 h-8 text-[#C1DCEF] mb-4"/>
                             <h3 className="text-2xl font-display font-semibold mb-4">Horaires</h3>
                             <ul className="space-y-2 text-gray-600">
@@ -157,50 +157,46 @@ function App() {
                         </div>
 
                         {/* Adresse avec carte et informations supplémentaires */}
-                        <div className="bg-white rounded-2xl p-6 shadow-lg">
-                            <MapPin className="w-8 h-8 text-[#C7DFD1] mb-4"/>
-                            <h3 className="text-2xl font-display font-semibold mb-4">Adresse</h3>
-                            <p className="text-gray-600 text-center text-lg mb-4">
-                                Bâtiment L'Ultra<br/>
-                                164 Rue de Charlieu,<br/>
-                                42300 Roanne<br/>
-                                France
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* Deuxième rangée : Contacts individuels */}
-                    <div className="grid md:grid-cols-2 gap-8 mt-8">
-
-
-
-                        {/* Adresse avec carte et informations supplémentaires */}
                         <div className="bg-white rounded-2xl p-6 shadow-lg md:col-span-2">
-                            <Key className="w-8 h-8 text-[#C7DFD1] mb-4"/>
-                            <h3 className="text-2xl font-display font-semibold mb-4">Acces</h3>
-
-                            <ul className="text-gray-600 mb-4 list-disc list-inside">
-                                <li className="font-semibold">1er étage avec ascenseur</li>
-                                <li className="font-semibold">Parking gratuit</li>
-                                <li className="font-semibold">Accès facile via la voie rapide</li>
-                            </ul>
-                            <div className="w-full h-64">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.7498239111402!2d4.084773854398087!3d46.050536498270446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f40f37f4aa8f2b%3A0xa4e33d9019fc01f1!2sUltra!5e0!3m2!1sfr!2sfr!4v1743158427167!5m2!1sfr!2sfr"
-                                    width="100%"
-                                    height="100%"
-                                    style={{border: 0}}
-                                    allowFullScreen=""
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                ></iframe>
+                            <div className="grid md:grid-cols-2 gap-4">
+                                {/* Colonne gauche : adresse et infos */}
+                                <div>
+                                    <MapPin className="w-8 h-8 text-[#C7DFD1] mb-4"/>
+                                    <h3 className="text-2xl font-display font-semibold mb-4">Adresse</h3>
+                                    <p className="text-gray-600 text-center text-lg mb-4">
+                                        Bâtiment L'Ultra<br/>
+                                        164 Rue de Charlieu,<br/>
+                                        42300 Roanne<br/>
+                                        France
+                                    </p>
+                                    <ul className="text-gray-600 mb-4 list-disc list-inside">
+                                        <li className="font-semibold">1er étage avec ascenseur</li>
+                                        <li className="font-semibold">Parking gratuit</li>
+                                        <li className="font-semibold">Accès facile via la voie rapide</li>
+                                    </ul>
+                                </div>
+                                {/* Colonne droite : carte */}
+                                <div>
+                                    <div className="w-full h-full">
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.7498239111402!2d4.084773854398087!3d46.050536498270446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f40f37f4aa8f2b%3A0xa4e33d9019fc01f1!2sUltra!5e0!3m2!1sfr!2sfr!4v1743158427167!5m2!1sfr!2sfr"
+                                            width="100%"
+                                            height="100%"
+                                            style={{border: 0}}
+                                            allowFullScreen=""
+                                            loading="lazy"
+                                            referrerPolicy="no-referrer-when-downgrade"
+                                        ></iframe>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
                     </div>
 
                     {/* Nouvelle card : Notre Établissement en pleine largeur */}
                     <div className="bg-white rounded-2xl p-6 shadow-lg md:col-span-2">
-                        <Building className="w-8 h-8 text-[#C7DFD1] mb-4" />
+                        <Building className="w-8 h-8 text-[#C7DFD1] mb-4"/>
                         <h3 className="text-2xl font-display font-semibold mb-4">Notre Établissement</h3>
                         <div className="grid md:grid-cols-4 gap-4">
                             <div>
