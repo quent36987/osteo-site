@@ -144,7 +144,8 @@ function App() {
                             <Clock className="w-8 h-8 text-[#C1DCEF] mb-4"/>
                             <h3 className="text-xl font-display font-semibold mb-4">Horaires</h3>
                             <ul className="space-y-2 text-gray-600">
-                                <li className="font-semibold">Lundi - Vendredi : 8h - 20h</li>
+                                <li className="font-semibold text-xl">Lundi - Vendredi : 8h - 20h</li>
+                                <li className="font-semibold text-xl">Samedi : 9h - 13h</li>
                             </ul>
                             <p className="text-gray-600 mt-4" style={{textAlign: 'justify'}}>
                                 Pour correspondre au mieux à votre emploi du temps, nous avons aménagé une large plage
