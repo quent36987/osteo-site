@@ -64,44 +64,51 @@ function App() {
 
         {/* Header */}
         <section id="accueil" className="pt-32 pb-20 relative overflow-hidden">
-          <div
-              className="section-shape section-shape-blue absolute top-0 right-0 -translate-y-1/2 translate-x-1/2"></div>
-          <div
-              className="section-shape section-shape-green absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2"></div>
+          <div className="section-shape section-shape-blue absolute top-0 right-0 -translate-y-1/2 translate-x-1/2"></div>
+          <div className="section-shape section-shape-green absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <h1 className="text-5xl md:text-6xl font-display font-bold text-gray-900 mb-6">
-              Bienvenue au Cabinet d'Ostéopathie
+            <h1 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4 text-center leading-snug">
+              Cabinet d'Ostéopathie<br />de Morann Durand &amp; Phèdre Petelet
             </h1>
-            <p className="text-xl text-gray-600 mb-12 max-w-2xl">
-              Votre bien-être est notre priorité. Nos ostéopathes expérimentés vous accompagnent vers une meilleure
-              santé.
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto text-center">
+              Un cadre moderne et facilement accessible à Roanne, pour une prise en charge sur mesure
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href="https://user.clicrdv.com/morann-durand" className="btn btn-primary">
-                RDV avec Dr. Morann Durand
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <a
+                  href="https://user.clicrdv.com/morann-durand"
+                  className="btn btn-primary text-lg py-3 px-8"
+              >
+                RDV avec Morann Durand
               </a>
-              <a href="https://www.doctolib.fr/osteopathe/roanne/phedre-petelet-roanne" className="btn btn-secondary">
-                RDV avec Dr. Phèdre Petelet
+              <a
+                  href="https://www.doctolib.fr/osteopathe/roanne/phedre_petelet-roanne"
+                  className="btn btn-secondary text-lg py-3 px-8"
+              >
+                RDV avec Phèdre Petelet
               </a>
             </div>
           </div>
         </section>
 
-        {/* À propos */}
+        {/* Vos ostéopathes */}
         <section id="about" className="py-20 bg-brand-blue/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-display font-bold text-gray-900 mb-12 text-center">Notre Équipe</h2>
+            <h2 className="text-3xl font-display font-bold text-gray-900 mb-12 text-center">
+              Vos ostéopathes
+            </h2>
             <div className="grid md:grid-cols-2 gap-12">
               {[
                 {
-                  name: "Dr. Morann Durand",
+                  name: "Morann DURAND",
                   image: "./durand.jpg",
-                  description: "Spécialisée dans l'ostéopathie pédiatrique et périnatale, Dr. Durand accompagne ses patients avec une approche douce et personnalisée."
+                  description:
+                      "Diplômé du CEESO Lyon en 2015, j’ai approfondi mes compétences avec un D.U. en Soins d’urgences en milieu sportif. Je mets mon expérience de basketteur au service des sportifs, mais aussi de toutes les personnes actives. Formé en gestes et posture, j’accompagne également les entreprises et leurs collaborateurs dans la prévention des troubles musculo-squelettiques (TMS) dans le but de préserver le bien-être au travail. Je me forme régulièrement pour enrichir mes compétences et offrir à mes patients les soins les plus adaptés à leurs besoins."
                 },
                 {
-                  name: "Dr. Phèdre Petelet",
+                  name: "Phèdre PETELET",
                   image: "./phedre.jpeg",
-                  description: "Experte en ostéopathie du sport et posturale, Dr. Petelet propose des solutions adaptées pour optimiser les performances et le bien-être."
+                  description:
+                      "Diplômée du CEESO Lyon en 2024, j’accompagne des patients de tous âges, des nourrissons aux séniors, en adaptant mes soins aux besoins spécifiques de chacun. Je prends le temps d’expliquer chaque geste et chaque choix thérapeutique, afin que mes patients se sentent en confiance et comprennent pleinement leur traitement. Soucieuse de maintenir une pratique éthique et déontologique, je me remets régulièrement en question et reste à jour grâce à une veille continue de la littérature scientifique. Pour les personnes ayant des difficultés à se déplacer, je propose également des consultations à domicile."
                 }
               ].map((osteo, index) => (
                   <div key={index} className="bg-white rounded-2xl shadow-lg text-center p-6">
@@ -110,14 +117,18 @@ function App() {
                         alt={osteo.name}
                         className="w-40 h-40 object-cover rounded-full mx-auto mt-4 shadow-md"
                     />
-                    <h3 className="text-xl font-display font-semibold text-gray-900 mt-4">{osteo.name}</h3>
+                    <h3 className="text-2xl font-display font-semibold text-gray-900 mt-4">
+                      {osteo.name}
+                    </h3>
                     <p className="text-gray-600 mt-2">{osteo.description}</p>
                   </div>
-
               ))}
             </div>
           </div>
         </section>
+
+
+
 
         {/* À qui s'adresse l'ostéopathie */}
         <section id="pour-qui" className="py-20 bg-brand-green/20">
@@ -182,7 +193,9 @@ function App() {
             <h2 className="text-3xl font-display font-bold text-gray-900 mb-12 text-center">
               Informations Pratiques
             </h2>
-            <div className="grid md:grid-cols-3 gap-8">
+
+            {/* Première rangée : Horaires et Adresse avec carte */}
+            <div className="grid md:grid-cols-2 gap-8">
               {/* Horaires */}
               <div className="bg-white rounded-2xl p-6 shadow-lg">
                 <Clock className="w-8 h-8 text-[#C1DCEF] mb-4"/>
@@ -192,36 +205,84 @@ function App() {
                   <li>Samedi : 9h - 12h30</li>
                   <li>Dimanche : Fermé</li>
                 </ul>
+                <img
+                    src="./batiment.jpg"
+                    alt="Bâtiment L'Ultra"
+                    className="w-full h-auto rounded-lg shadow-md mb-4"
+                />
               </div>
 
-              {/* Adresse */}
+              {/* Adresse avec carte et informations supplémentaires */}
               <div className="bg-white rounded-2xl p-6 shadow-lg">
-                <MapPin className="w-8 h-8 text-[#C7DFD1] mb-4"/>
+                <MapPin className="w-8 h-8 text-[#C7DFD1] mb-4" />
                 <h3 className="text-xl font-display font-semibold mb-4">Adresse</h3>
-                <p className="text-gray-600">
-                  Bâtiment L'Ultra<br/>
-                  164 Rue de Charlieu,<br/>
-                  42300 Roanne<br/>
+                <p className="text-gray-600 mb-4">
+                  Bâtiment L'Ultra<br />
+                  164 Rue de Charlieu,<br />
+                  42300 Roanne<br />
                   France
                 </p>
+                <ul className="text-gray-600 mb-4 list-disc list-inside">
+                  <li>1er étage avec ascenseur</li>
+                  <li>Parking gratuit</li>
+                  <li>Accès facile via la voie rapide</li>
+                </ul>
+                <div className="w-full h-64">
+                  <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.7498239111402!2d4.084773854398087!3d46.050536498270446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f40f37f4aa8f2b%3A0xa4e33d9019fc01f1!2sUltra!5e0!3m2!1sfr!2sfr!4v1743158427167!5m2!1sfr!2sfr"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+
+            {/* Deuxième rangée : Contacts individuels */}
+            <div className="grid md:grid-cols-2 gap-8 mt-8">
+              {/* Contact Morann */}
+              <div className="bg-[#C7DFD1] rounded-2xl p-6 shadow-lg">
+                <h3 className="text-xl font-display font-semibold mb-4">Morann Durand</h3>
+                <div className="flex items-center gap-2">
+                  <Phone className="w-6 h-6" />
+                  <span className="text-gray-900">06 81 41 19 57</span>
+                </div>
+                <div className="flex items-center gap-2 mt-2">
+                  <Mail className="w-6 h-6" />
+                  <a
+                      href="mailto:morann.durand.osteo@gmail.com"
+                      className="text-blue-600 hover:underline"
+                  >
+                    morann.durand.osteo@gmail.com
+                  </a>
+                </div>
               </div>
 
-              {/* Contact */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg">
-                <Phone className="w-8 h-8 text-[#C1DCEF] mb-4"/>
-                <h3 className="text-xl font-display font-semibold mb-4">Contact</h3>
-                <p className="text-gray-600 space-y-1">
-                  <a href="tel:+33769772380" className="text-blue-600 hover:underline block">
-                    Tél : 07 69 77 23 80
+              {/* Contact Phèdre */}
+              <div className="bg-[#C1DCEF] rounded-2xl p-6 shadow-lg">
+                <h3 className="text-xl font-display font-semibold mb-4">Phèdre Petelet</h3>
+                <div className="flex items-center gap-2">
+                  <Phone className="w-6 h-6" />
+                  <span className="text-gray-900">07 69 77 23 80</span>
+                </div>
+                <div className="flex items-center gap-2 mt-2">
+                  <Mail className="w-6 h-6" />
+                  <a
+                      href="mailto:phedre.petelet.osteo@gmail.com"
+                      className="text-blue-600 hover:underline"
+                  >
+                    phedre.petelet.osteo@gmail.com
                   </a>
-                  <a href="mailto:contact@osteo-roanne.fr" className="text-blue-600 hover:underline block">
-                    Email : contact@osteo-roanne.fr
-                  </a>
-                </p>
+                </div>
               </div>
             </div>
           </div>
         </section>
+
+
 
 
         {/* Pourquoi consulter */}
@@ -232,23 +293,85 @@ function App() {
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
               {[
-                "Douleurs musculo-squelettiques",
-                "Stress et fatigue",
-                "Migraines et maux de tête",
-                "Problèmes digestifs",
-                "Troubles du sommeil",
-                "Suivi post-traumatique"
-              ].map((reason, index) => (
+                {
+                  title: "Troubles musculo-squelettiques (TMS)",
+                  points: [
+                    "Lombalgie (douleur lombaire)",
+                    "Sciatalgie (douleur du nerf sciatique)",
+                    "Cervicalgie (douleur cervicale)",
+                    "Dorsalgie (douleur du haut du dos)",
+                    "Etc..."
+                  ]
+                },
+                {
+                  title: "Troubles digestifs",
+                  points: [
+                    "Ballonnements",
+                    "Constipation",
+                    "Reflux gastro-œsophagien (RGO)"
+                  ]
+                },
+                {
+                  title: "Maux de tête",
+                  points: [
+                    "Migraines",
+                    "Céphalées de tension ou céphalée cervico-génique"
+                  ]
+                },
+                {
+                  title: "Suivi des blessures",
+                  points: [
+                    "Fractures",
+                    "Entorses",
+                    "Tendinites",
+                    "Post Chirurgies"
+                  ]
+                },
+                {
+                  title: "Prévention",
+                  points: [
+                    "Réduction des tensions liées au stress",
+                    "Maintien de la mobilité",
+                    "Prévention de douleurs récurrentes"
+                  ]
+                },
+                {
+                  title: "Accompagnement de grossesse",
+                  points: [
+                    "TMS liés à la grossesse",
+                    "Préparation à l'accouchement"
+                  ]
+                },
+                {
+                  title: "Nourrissons et enfants",
+                  points: [
+                    "Troubles digestifs (coliques, constipation, reflux)",
+                    "Torticolis et plagiocéphalie (tête plate)",
+                    "Prévention et surveillance des troubles de la croissance"
+                  ]
+                },
+                {
+                  title: "Personnes âgées",
+                  points: [
+                    "Maintien de la mobilité et souplesse articulaire",
+                    "Soulagement des douleurs chroniques liées à l'âge",
+                    "Amélioration de l'équilibre pour prévenir les chutes"
+                  ]
+                }
+              ].map((card, index) => (
                   <div key={index} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                    <h3 className="text-xl font-display font-semibold mb-4">{reason}</h3>
-                    <p className="text-gray-600">
-                      L'ostéopathie peut vous aider à soulager ces symptômes de manière naturelle et durable.
-                    </p>
+                    <h3 className="text-xl font-display font-semibold mb-4">{card.title}</h3>
+                    <ul className="text-gray-600 list-disc list-inside space-y-1">
+                      {card.points.map((point, i) => (
+                          <li key={i}>{point}</li>
+                      ))}
+                    </ul>
                   </div>
               ))}
             </div>
           </div>
         </section>
+
 
         {/* FAQ */}
         <section id="faq" className="py-20 bg-brand-blue/20">
@@ -276,17 +399,22 @@ function App() {
                 {
                   question: "Combien de séances sont nécessaires ?",
                   answer:
-                      "Le nombre de séances varie selon chaque patient et sa problématique. Une évaluation sera faite lors de la première consultation."
+                      "Le nombre de séances varie selon plusieurs facteurs tels que le ou les motifs consultations, l'évolution de la situation, ou encore vos besoins spécifiques... C'est en discutant ensemble que vous et votre ostéopathe pourrez déterminer le nombre et la fréquence de séances les plus adaptés à votre situation."
                 },
                 {
                   question: "Est-ce que les manipulations sont douloureuses ?",
                   answer:
-                      "L'ostéopathie est une thérapie douce. Si certaines manipulations peuvent être sensibles, elles ne doivent pas être douloureuses."
+                      "Les manipulations en ostéopathie ne sont généralement pas douloureuses. Cependant certaines techniques peuvent entraîner une sensation d'inconfort ou une légère douleur passagère. Le dialogue avec votre thérapeute est essentiel pour qu'il puisse ajuster sa technique dans le but d'assurer un traitement à la fois efficace et confortable."
                 },
                 {
                   question: "Puis-je venir consulter sans ordonnance ?",
                   answer:
                       "Oui, l'ostéopathie est une profession de première intention. Vous pouvez consulter directement, sans avoir besoin d'une prescription médicale."
+                },
+                {
+                  question: "Est ce que vous faites des manipulations qui font craquer ? Est-ce possible d'éviter cela ?",
+                  answer:
+                      "Oui, vos ostéopathes utilisent des techniques qui peuvent provoquer un \"craquement\", cependant ce n'est pas systématique et ce n'est pas la seule approche utilisée. Votre ostéopathe choisira les techniques qu'il juge les plus appropriées à votre situation, tout en s'assurant d'avoir votre consentement à chaque étape. Si vous préférez éviter cette sensation, il existe d'autres techniques qui ne provoquent pas de \"craquement\". N'hésitez pas à signaler tout inconfort, à n'importe quel moment, votre ostéopathe s'adaptera pour que vous soyez à l'aise pendant la séance."
                 }
               ].map((item, index) => (
                   <details key={index} className="bg-white rounded-2xl p-6 shadow-lg group">
@@ -301,38 +429,74 @@ function App() {
         </section>
 
 
+
         {/* Footer */}
         <footer className="bg-gray-900 text-white py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-3 gap-8">
+              {/* Informations générales */}
               <div>
-                <h3 className="text-xl font-display font-semibold mb-4">Cabinet d'Ostéopathie</h3>
-                <p className="text-gray-400">
-                  Votre santé entre de bonnes mains
-                </p>
+                <h3 className="text-xl font-display font-semibold mb-4">
+                  Cabinet d'Ostéopathie de Morann Durand &amp; Phèdre Petelet
+                </h3>
+                <p className="text-gray-400">Votre santé entre de bonnes mains</p>
               </div>
+
+              {/* Coordonnées */}
               <div>
                 <h3 className="text-xl font-display font-semibold mb-4">Contact</h3>
-                <ul className="space-y-2 text-gray-400">
+                <ul className="space-y-4 text-gray-400">
                   <li className="flex items-center gap-2">
-                    <MapPin size={16}/> Bâtiment L'Ultra 164 Rue de Charlieu, 42300 Roanne
+                    <MapPin size={16}/>
+                    <a
+                        href="https://www.google.com/maps/place/Ultra/@46.0505756,4.0847401,21z/data=!4m6!3m5!1s0x47f40f37f4aa8f2b:0xa4e33d9019fc01f1!8m2!3d46.0505544!4d4.0847285!16s%2Fg%2F11f03l872w?hl=fr&entry=ttu&g_ep=EgoyMDI1MDMyNC4wIKXMDSoASAFQAw%3D%3D"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline"
+                    >
+                      Bâtiment L'Ultra, 164 Rue de Charlieu, 42300 Roanne
+                    </a>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <Phone size={16}/> 07 69 77 23 80
+                  <li>
+                    <span className="font-bold block">Morann Durand</span>
+                    <div className="flex items-center gap-2">
+                      <Phone size={16}/>
+                      <span>06 81 41 19 57</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Mail size={16}/>
+                      <span>morann.durand.osteo@gmail.com</span>
+                    </div>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <Mail size={16}/> contact@osteo-roanne.fr
+                  <li>
+                    <span className="font-bold block">Phèdre Petelet</span>
+                    <div className="flex items-center gap-2">
+                      <Phone size={16}/>
+                      <span>07 69 77 23 80</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Mail size={16}/>
+                      <span>phedre.petelet.osteo@gmail.com</span>
+                    </div>
                   </li>
                 </ul>
               </div>
+
+              {/* Prendre RDV */}
               <div>
-                <h3 className="text-xl font-display font-semibold mb-4">Suivez-nous</h3>
-                <div className="flex space-x-4">
-                  <a href="#" className="hover:text-[#C1DCEF]">
-                    <Facebook size={24}/>
+                <h3 className="text-xl font-display font-semibold mb-4">Prendre RDV</h3>
+                <div className="flex flex-col space-y-4">
+                  <a
+                      href="https://user.clicrdv.com/morann-durand"
+                      className="btn btn-secondary"
+                  >
+                    Prendre RDV avec Morann Durand
                   </a>
-                  <a href="#" className="hover:text-[#C7DFD1]">
-                    <Instagram size={24}/>
+                  <a
+                      href="https://www.doctolib.fr/osteopathe/roanne/phedre-petelet-roanne"
+                      className="btn btn-primary"
+                  >
+                    Prendre RDV avec Phèdre Petelet
                   </a>
                 </div>
               </div>
@@ -342,6 +506,8 @@ function App() {
             </div>
           </div>
         </footer>
+
+
       </div>
   );
 }
