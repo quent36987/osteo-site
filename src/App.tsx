@@ -146,7 +146,7 @@ function App() {
                             <ul className="space-y-2 text-gray-600">
                                 <li className="font-semibold">Lundi - Vendredi : 8h - 20h</li>
                             </ul>
-                            <p className="text-gray-600 mt-4">
+                            <p className="text-gray-600 mt-4" style={{textAlign: 'justify'}}>
                                 Pour correspondre au mieux à votre emploi du temps, nous avons aménagé une large plage
                                 horaire. En nous relayant, nous nous efforçons de vous proposer des rendez-vous
                                 rapidement et avec plus de flexibilité.
@@ -351,7 +351,6 @@ function App() {
                                     "Sciatalgie (douleur du nerf sciatique)",
                                     "Cervicalgie (douleur cervicale)",
                                     "Dorsalgie (douleur du haut du dos)",
-                                    "Etc..."
                                 ]
                             },
                             {
