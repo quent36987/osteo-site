@@ -196,43 +196,29 @@ function App() {
 
                     {/* Nouvelle card : Notre Établissement en pleine largeur */}
                     <div className="bg-white rounded-2xl p-6 shadow-lg md:col-span-2">
-                        <Building className="w-8 h-8 text-[#C7DFD1] mb-4"/>
+                        <Building className="w-8 h-8 text-[#C1DCEF] mb-4"/>
                         <h3 className="text-2xl font-display font-semibold mb-4">Notre Établissement</h3>
                         <div className="grid md:grid-cols-4 gap-4">
-                            <div>
-                                <img
-                                    src="./batiment.jpg"
-                                    alt="Bâtiment L'Ultra"
-                                    className="w-full h-auto rounded-lg shadow-md"
-                                />
-                                <p className="text-center mt-2 text-gray-600">Bâtiment L'Ultra</p>
-                            </div>
-                            <div>
-                                <img
-                                    src="./salle.jpg"
-                                    alt="Salle de Consultation"
-                                    className="w-full h-auto rounded-lg shadow-md"
-                                />
-                                <p className="text-center mt-2 text-gray-600">Salle de Consultation</p>
-                            </div>
-                            <div>
-                                <img
-                                    src="./attente.jpg"
-                                    alt="Salle d'attente"
-                                    className="w-full h-auto rounded-lg shadow-md"
-                                />
-                                <p className="text-center mt-2 text-gray-600">Salle d'attente</p>
-                            </div>
-                            <div>
-                                <img
-                                    src="./salle.jpg"
-                                    alt="Salle de console"
-                                    className="w-full h-auto rounded-lg shadow-md"
-                                />
-                                <p className="text-center mt-2 text-gray-600">Salle de console</p>
-                            </div>
+                            {[
+                                {src: "./batiment.jpg", alt: "Bâtiment L'Ultra", label: "Bâtiment L'Ultra"},
+                                {src: "./salle.jpg", alt: "Salle de Consultation", label: "Salle de Consultation"},
+                                {src: "./attente.jpg", alt: "Salle d'attente", label: "Salle d'attente"},
+                                {src: "./salle.jpg", alt: "Salle de console", label: "2e Salle de Consultation"}
+                            ].map((item, index) => (
+                                <div key={index}>
+                                    <div className="w-full aspect-video rounded-lg overflow-hidden shadow-md">
+                                        <img
+                                            src={item.src}
+                                            alt={item.alt}
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <p className="text-center mt-2 text-gray-600">{item.label}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
+
 
                     {/* Deuxième rangée : Contacts individuels */}
                     <div className="grid md:grid-cols-2 gap-8 mt-8">
