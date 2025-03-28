@@ -172,32 +172,10 @@ function App() {
                     {/* Deuxième rangée : Contacts individuels */}
                     <div className="grid md:grid-cols-2 gap-8 mt-8">
 
-                        {/* Nouvelle card : Notre Établissement */}
-                        <div className="bg-white rounded-2xl p-6 shadow-lg">
-                            <Building className="w-8 h-8 text-[#C7DFD1] mb-4"/>
-                            <h3 className="text-2xl font-display font-semibold mb-4">Notre Établissement</h3>
-                            <div className="grid md:grid-cols-2 gap-4">
-                                <div>
-                                    <img
-                                        src="./batiment.jpg"
-                                        alt="Bâtiment L'Ultra"
-                                        className="w-full h-auto rounded-lg shadow-md"
-                                    />
-                                    <p className="text-center mt-2 text-gray-600">Bâtiment L'Ultra</p>
-                                </div>
-                                <div>
-                                    <img
-                                        src="./salle.jpg"
-                                        alt="Salle de Consultation"
-                                        className="w-full h-auto rounded-lg shadow-md"
-                                    />
-                                    <p className="text-center mt-2 text-gray-600">Salle de Consultation</p>
-                                </div>
-                            </div>
-                        </div>
+
 
                         {/* Adresse avec carte et informations supplémentaires */}
-                        <div className="bg-white rounded-2xl p-6 shadow-lg">
+                        <div className="bg-white rounded-2xl p-6 shadow-lg md:col-span-2">
                             <Key className="w-8 h-8 text-[#C7DFD1] mb-4"/>
                             <h3 className="text-2xl font-display font-semibold mb-4">Acces</h3>
 
@@ -216,6 +194,46 @@ function App() {
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
                                 ></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Nouvelle card : Notre Établissement en pleine largeur */}
+                    <div className="bg-white rounded-2xl p-6 shadow-lg md:col-span-2">
+                        <Building className="w-8 h-8 text-[#C7DFD1] mb-4" />
+                        <h3 className="text-2xl font-display font-semibold mb-4">Notre Établissement</h3>
+                        <div className="grid md:grid-cols-4 gap-4">
+                            <div>
+                                <img
+                                    src="./batiment.jpg"
+                                    alt="Bâtiment L'Ultra"
+                                    className="w-full h-auto rounded-lg shadow-md"
+                                />
+                                <p className="text-center mt-2 text-gray-600">Bâtiment L'Ultra</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="./salle.jpg"
+                                    alt="Salle de Consultation"
+                                    className="w-full h-auto rounded-lg shadow-md"
+                                />
+                                <p className="text-center mt-2 text-gray-600">Salle de Consultation</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="./attente.jpg"
+                                    alt="Salle d'attente"
+                                    className="w-full h-auto rounded-lg shadow-md"
+                                />
+                                <p className="text-center mt-2 text-gray-600">Salle d'attente</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="./salle.jpg"
+                                    alt="Salle de console"
+                                    className="w-full h-auto rounded-lg shadow-md"
+                                />
+                                <p className="text-center mt-2 text-gray-600">Salle de console</p>
                             </div>
                         </div>
                     </div>
