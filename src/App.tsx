@@ -144,7 +144,7 @@ function App() {
                         {/* Horaires */}
                         <div className="bg-white rounded-2xl p-6 shadow-lg">
                             <Clock className="w-8 h-8 text-[#C1DCEF] mb-4"/>
-                            <h3 className="text-xl font-display font-semibold mb-4">Horaires</h3>
+                            <h3 className="text-2xl font-display font-semibold mb-4">Horaires</h3>
                             <ul className="space-y-2 text-gray-600">
                                 <li className="font-semibold text-lg">Lundi - Vendredi : 8h - 20h</li>
                                 <li className="font-semibold text-lg">Samedi : 9h - 13h</li>
@@ -340,7 +340,7 @@ function App() {
                     <h2 className="text-3xl font-display font-bold text-gray-900 mb-12 text-center">
                         Pourquoi Consulter ?
                     </h2>
-                    <div className="grid md:grid-cols-3 gap-6">
+                    <div className="grid md:grid-cols-4 gap-6">
                         {[
                             {
                                 title: "Troubles musculo-squelettiques (TMS)",
@@ -361,19 +361,19 @@ function App() {
                                 ]
                             },
                             {
-                                title: "Maux de tête",
+                                title: "Nourrissons et enfants",
                                 points: [
-                                    "Migraines",
-                                    "Céphalées de tension ou céphalées cervico-géniques"
+                                    "Troubles digestifs (coliques, constipation, reflux)",
+                                    "Torticolis et plagiocéphalie (tête plate)",
+                                    "Prévention et surveillance des troubles de la croissance"
                                 ]
                             },
                             {
-                                title: "Suivi des blessures",
+                                title: "Personnes âgées",
                                 points: [
-                                    "Fractures",
-                                    "Entorses",
-                                    "Tendinites",
-                                    "Post Chirurgies"
+                                    "Maintien de la mobilité et souplesse articulaire",
+                                    "Soulagement des douleurs chroniques liées à l'âge",
+                                    "Amélioration de l'équilibre pour prévenir les chutes"
                                 ]
                             },
                             {
@@ -392,29 +392,23 @@ function App() {
                                 ]
                             },
                             {
-                                title: "Nourrissons et enfants",
+                                title: "Maux de tête",
                                 points: [
-                                    "Troubles digestifs (coliques, constipation, reflux)",
-                                    "Torticolis et plagiocéphalie (tête plate)",
-                                    "Prévention et surveillance des troubles de la croissance"
+                                    "Migraines",
+                                    "Céphalées de tension ou céphalées cervico-géniques"
                                 ]
                             },
                             {
-                                title: "Personnes âgées",
+                                title: "Suivi des blessures",
                                 points: [
-                                    "Maintien de la mobilité et souplesse articulaire",
-                                    "Soulagement des douleurs chroniques liées à l'âge",
-                                    "Amélioration de l'équilibre pour prévenir les chutes"
+                                    "Fractures",
+                                    "Entorses",
+                                    "Tendinites",
+                                    "Post Chirurgies"
                                 ]
                             },
-                            {
-                                title: "Stress et fatigue",
-                                points: [
-                                    "Réduction du stress quotidien",
-                                    "Amélioration de la qualité du sommeil",
-                                    "Renforcement de l'énergie vitale"
-                                ]
-                            }
+
+
                         ].map((card, index) => (
                             <div key={index}
                                  className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
