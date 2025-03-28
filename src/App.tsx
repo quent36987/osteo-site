@@ -110,7 +110,7 @@ function App() {
                                 name: "Phèdre PETELET",
                                 image: "./phedre.jpeg",
                                 description:
-                                    "Diplômée du CEESO Lyon en 2024, j’accompagne des patients de tous âges, des nourrissons aux séniors, en adaptant mes soins aux besoins spécifiques de chacun. Je prends le temps d’expliquer chaque geste afin que mes patients comprennent pleinement leur traitement. Attachée à une pratique éthique et actualisée, je me tiens informée en continu des avancées scientifiques. Pour les personnes ayant des difficultés à se déplacer, je propose également des consultations à domicile."
+                                    "Diplômée du CEESO Lyon en 2024, j’accompagne des patients de tous âges, des nourrissons aux séniors, en adaptant mes soins aux besoins spécifiques de chacun. Je prends le temps d’expliquer chaque geste afin que mes patients comprennent pleinement leur traitement. Attachée à une pratique éthique et actualisée, je me tiens informée en continu des avancées scientifiques. Pour les personnes ayant des difficultés à se déplacer, je propose également des consultations à domicile."
                             }
                         ].map((osteo, index) => (
                             <div key={index} className="bg-white rounded-2xl shadow-lg text-center p-6">
@@ -122,12 +122,14 @@ function App() {
                                 <h3 className="text-2xl font-display font-semibold text-gray-900 mt-4">
                                     {osteo.name}
                                 </h3>
+                                <p className="text-sm text-gray-500 mb-2">Ostéopathe D.O.</p>
                                 <p className="text-gray-600 mt-2">{osteo.description}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
+
 
 
             {/* Informations pratiques */}
@@ -278,7 +280,7 @@ function App() {
                             {
                                 title: "Nourrissons",
                                 image:
-                                    "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&q=80&w=300"
+                                    "https://www.etiopathe-debreil.fr/photos/shutterstock_352385927.jpg"
                             },
                             {
                                 title: "Enfants",
@@ -309,11 +311,6 @@ function App() {
                                 title: "Séniors",
                                 image:
                                     "https://img.freepik.com/photos-gratuite/femme-senior-africaine-souriante-portrait-visage_53876-143107.jpg"
-                            },
-                            {
-                                title: "Professionnels",
-                                image:
-                                    "https://img.freepik.com/photos-gratuite/homme-affaires-angle-eleve_23-2148479585.jpg"
                             }
                         ].map((profile, index) => (
                             <div key={index} className="relative group flex-shrink-0 w-32 h-32">
@@ -352,6 +349,7 @@ function App() {
                                     "Sciatalgie (douleur du nerf sciatique)",
                                     "Cervicalgie (douleur cervicale)",
                                     "Dorsalgie (douleur du haut du dos)",
+                                    "Etc ..."
                                 ]
                             },
                             {
@@ -366,7 +364,7 @@ function App() {
                                 title: "Maux de tête",
                                 points: [
                                     "Migraines",
-                                    "Céphalées de tension ou céphalée cervico-génique"
+                                    "Céphalées de tension ou céphalées cervico-géniques"
                                 ]
                             },
                             {
@@ -481,7 +479,7 @@ function App() {
                                 <summary className="text-lg font-display font-semibold cursor-pointer list-none">
                                     {item.question}
                                 </summary>
-                                <p className="mt-4 text-gray-600">{item.answer}</p>
+                                <p className="mt-4 text-gray-600 text-justify">{item.answer}</p>
                             </details>
                         ))}
                     </div>
