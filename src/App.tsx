@@ -247,8 +247,10 @@ function App() {
               <div className="bg-[#C7DFD1] rounded-2xl p-6 shadow-lg">
                 <h3 className="text-xl font-display font-semibold mb-4">Morann Durand</h3>
                 <div className="flex items-center gap-2">
-                  <Phone className="w-6 h-6" />
-                  <span className="text-gray-900">06 81 41 19 57</span>
+                  <Phone className="w-6 h-6"/>
+                  <a href="tel:0681411957" className="text-gray-900 hover:underline">
+                    06 81 41 19 57
+                  </a>
                 </div>
                 <div className="flex items-center gap-2 mt-2">
                   <Mail className="w-6 h-6" />
@@ -265,8 +267,10 @@ function App() {
               <div className="bg-[#C1DCEF] rounded-2xl p-6 shadow-lg">
                 <h3 className="text-xl font-display font-semibold mb-4">Phèdre Petelet</h3>
                 <div className="flex items-center gap-2">
-                  <Phone className="w-6 h-6" />
-                  <span className="text-gray-900">07 69 77 23 80</span>
+                  <Phone className="w-6 h-6"/>
+                  <a href="tel:0769772380" className="text-gray-900 hover:underline">
+                    07 69 77 23 80
+                  </a>
                 </div>
                 <div className="flex items-center gap-2 mt-2">
                   <Mail className="w-6 h-6" />
