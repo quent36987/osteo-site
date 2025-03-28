@@ -76,13 +76,13 @@ function App() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <a
                   href="https://user.clicrdv.com/morann-durand"
-                  className="btn btn-primary text-lg py-3 px-8"
+                  className="btn btn-secondary text-lg py-3 px-8"
               >
                 RDV avec Morann Durand
               </a>
               <a
                   href="https://www.doctolib.fr/osteopathe/roanne/phedre_petelet-roanne"
-                  className="btn btn-secondary text-lg py-3 px-8"
+                  className="btn btn-primary text-lg py-3 px-8"
               >
                 RDV avec Phèdre Petelet
               </a>
