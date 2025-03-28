@@ -100,7 +100,7 @@ function App() {
               {[
                 {
                   name: "Morann DURAND",
-                  image: "./durand.jpg",
+                  image: "./durand.png",
                   description:
                       "Diplômé du CEESO Lyon en 2015, j’ai approfondi mes compétences avec un D.U. en Soins d’urgences en milieu sportif. Je mets mon expérience de basketteur au service des sportifs, mais aussi de toutes les personnes actives. Formé en gestes et posture, j’accompagne également les entreprises et leurs collaborateurs dans la prévention des troubles musculo-squelettiques (TMS) dans le but de préserver le bien-être au travail. Je me forme régulièrement pour enrichir mes compétences et offrir à mes patients les soins les plus adaptés à leurs besoins."
                 },
