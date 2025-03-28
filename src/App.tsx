@@ -23,7 +23,7 @@ function App() {
                             <span className="text-2xl font-display text-gray-900">Cabinet d'Ostéopathie</span>
                         </div>
                         <div className="hidden md:flex items-center space-x-8">
-                            {['accueil', 'Vos ostéopathes', 'pour-qui', 'infos', 'pourquoi', 'faq'].map((item) => (
+                            {['accueil', 'Vos ostéopathes', 'infos', 'pour-qui', 'pourquoi', 'faq'].map((item) => (
                                 <button
                                     key={item}
                                     onClick={() => scrollToSection(item)}
@@ -48,7 +48,7 @@ function App() {
                 {isMenuOpen && (
                     <div className="md:hidden">
                         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                            {['accueil', 'Vos ostéopathes', 'pour-qui', 'infos', 'pourquoi', 'faq'].map((item) => (
+                            {['accueil', 'Vos ostéopathes',  'infos','pour-qui', 'pourquoi', 'faq'].map((item) => (
                                 <button
                                     key={item}
                                     onClick={() => scrollToSection(item)}
@@ -93,7 +93,7 @@ function App() {
             </section>
 
             {/* Vos ostéopathes */}
-            <section id="about" className="py-20 bg-brand-blue/20">
+            <section id="Vos ostéopathes" className="py-20 bg-brand-blue/20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-3xl font-display font-bold text-gray-900 mb-12 text-center">
                         Vos ostéopathes
